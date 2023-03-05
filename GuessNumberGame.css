@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(41, 7, 43);
+}
+:root{
+    --col-rgbcolor:linear-gradient(110deg, #ff6600, #00FF66,#00FFFF,#FF00FF,#6e0dd0,#ff3300);
+    --col-btncolor:linear-gradient(90deg,#FF00FF,#ff0099,#6e0dd0);
+    --col-background: linear-gradient(45deg,#e6fb04,#ff6600,#00ff66);
+    --col-background2:  linear-gradient(45deg, rgba(21,151,226,1) 7%, rgba(170,194,201,1) 45%, rgba(11,220,226,1) 100%);
+ }
+
+
+/*
+body
+{
+    font-family: 'Press Start 2P',sans-serif;
+    color:#eee;
+    background-color: #222;
+}
+*/
+
+
+.back
+{
+    text-align: center;
+    position: relative;
+    /*background: rgba(225,225,255,0.8);*/
+    background: #999;
+    border-radius: 10%;
+    padding: 3em;
+    width: 300px;
+    height: 300px;
+}
+
+.between
+{
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.back::after
+{
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: var(--col-background);
+    background-size: 400%;
+    z-index: -1;
+    left: -1px;
+    bottom: -1px;
+    border-radius: 25% / 50%;
+    animation: animate 1900ms linear infinite;
+}
+
+.back::before
+{
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: var(--col-background2);
+    background-size: 400%;
+    z-index: -1;
+    left: -1px;
+    bottom: -1px;
+    border-radius: 25% / 50%;
+    animation: animate2 2000ms linear infinite;
+}
+
+
+.back::before
+{
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: var(--col-background2);
+    background-size: 400%;
+    z-index: -1;
+    left: -1px;
+    bottom: -1px;
+    border-radius: 25% / 50%;
+    animation: animate2 2000ms linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotatez(45deg);
+    }
+    50%
+    {
+        transform: rotateY(90deg);
+    }
+    100%
+    {
+        transform: rotatez(45deg);
+    }
+}
+
+
+@keyframes animate2
+{
+    0%
+    {
+        transform: rotateX(45deg);
+    }
+    50%
+    {
+        transform: rotateZ(90deg);
+    }
+    100%
+    {
+        transform: rotateX(45deg);
+    }
+}
+
+header{
+    height:  30vh;
+}
+
+.number
+{
+    color: #fff;
+    font-size: larger;
+    font-weight: 600;
+    text-align: center;
+    border: solid 2px #fff;
+    background: var(--col-rgbcolor);
+    background-size: 300%;
+    width: 20px;
+    border-radius: 30%;
+    padding: 8px;
+    position: relative;
+    margin: 10px 120px;    
+    animation: trananimate 2000ms infinite;
+}
+/*
+.number::after
+{
+    position: absolute;
+    content: "";
+    background:var(--col-rgbcolor);
+    width: 340px;
+    height: 3px;
+    left:-140px;
+    bottom: 15px;
+    background-size: 400%;
+    animation: trananimate 2000ms infinite;
+}*/
+
+@keyframes trananimate
+{
+ 0%
+ {
+    background-position: 0 0;
+ }
+ 50%
+ {
+    background-position: 400% 0;
+ }
+ 100%
+ {
+    background-position: 0 0;
+ }
+}
+
+body
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(41, 7, 43);
+    color: #fff;
+}
+
+
+header h1
+{
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 5px 5px salmon;
+    margin-bottom: 0.8em;
+}
+
+
+.again,.btn
+{
+    padding: 5px 8px;
+    border-style: none;
+    background: var(--col-btncolor);
+    background-size: 300%;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: trananimate2 20000ms infinite;
+}
+
+@keyframes trananimate2
+{
+    0%
+    {
+        background-position: left;
+    }
+    50%
+    {
+        background-position: top;
+    }
+    100%
+    {
+        background-position: bottom;
+    }
+}
+
+.guess
+{
+    border-style: none;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.right
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.right p
+{
+    border: solid rgb(119, 195, 234) 2px;
+    background: rgb(119, 195, 234);
+    border-radius: 18px;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 900;
+    margin: 10px 10px;
+}
