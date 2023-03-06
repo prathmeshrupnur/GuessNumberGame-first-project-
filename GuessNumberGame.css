@@ -119,10 +119,6 @@ body
     }
 }
 
-header{
-    height:  30vh;
-}
-
 .number
 {
     color: #fff;
@@ -227,21 +223,25 @@ header h1
     outline: none;
 }
 
+.left
+{
+    margin:1rem;
+}
+
 .right
 {
-    margin-top: 10px;
+    position:relative;
     display: flex;
     justify-content: center;
-
+    align-items:center;
+    
 }
 
 .right p
 {
-    border: solid rgb(119, 195, 234) 2px;
     background: rgb(119, 195, 234);
     border-radius: 18px;
-    padding: 5px 15px;
-    font-size: 12px;
-    font-weight: 900;
-    margin: 10px 10px;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+    margin: 0 1rem 0 0;
 }
